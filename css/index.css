@@ -99,6 +99,7 @@
 }
 .slide1{
     background-image: url("../img/banner1.jpg");
+    background-image: url("../img/banner1.jpg");
 }
 .slide2{
     background-image: url("../img/banner1.jpg");
@@ -119,11 +120,11 @@
     background-position: center center;
     background-image: url("../img/section2Bg.jpg");
     text-align: center;
-    background-attachment:fixed;
+    /* background-attachment:fixed;
     position: relative;
     width: 100%;
     min-width: 1200px;
-    height: auto;
+    height: auto; */
 }
 .des-con{
     width: 42%;
@@ -207,14 +208,20 @@
     border-radius: 6px;
     background: #f8f8f8;
 }
+.data-lis:hover{
+    background: #ffc900;
+}
+.data-lis:hover .data-img{
+    color: #333;
+    border: 2px solid #333;
+    margin-top: 40px;
+}
 .data-lis .number{
-    font-weight: 700;
+    font-weight: 500;
     font-size: 28px;
     margin-bottom: 10px;
 }
-/*.data-lis:hover{*/
-    /*background: #ffc900;*/
-/*}*/
+
 .data-lis>img{
     width: 110px;
     height: 110px;
@@ -230,10 +237,10 @@
     border-radius: 50%;
     line-height: 110px;
     text-align: center;
+    color: #ffc901;
 }
 .data-img>.iconFont{
    font-size: 50px;
-    color: #ffc901;
 }
 .data-lis>span{
     font-size: 16px;
@@ -241,24 +248,61 @@
 }
 .school-con{
     max-width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
 }
 .school-lis{
-    width: 634px;
-    height: 300px;
+    width: 33.333%;
+    height: auto;
     position: relative;
     overflow: hidden;
+    float: left;
 }
+.school-lis img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+.school-lis .school-des,.school-lis .school-more{
+    position: absolute;
+    color: #fff;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    transition:all .36s ease;
+}
+.school-lis .school-des{
+    top: -80px;
+}
+.school-lis .school-des div{
+    font-size: 16px;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+.school-lis .school-more{
+    bottom: -50px;
+}
+
 .school-lis:hover .school-mask{
-    display: block;
+    opacity: 1;
+}
+.school-lis:hover .school-more{
+    bottom: 20%;
+}
+.school-lis:hover .school-des{
+    top: 20%;
+}
+.school-lis:hover img{
+    transform: scale(1.1);
 }
 .school-mask{
-    display: none;
+    opacity: 0;
     position: absolute;
     top:0;
-    width:634px;
+    width:100%;
     height: 100%;
     color: #ffffff;
-    background: rgba(221,0,0,.4);
+    background: rgba(148, 19, 19, 0.7);
+    transition:all .36s ease;
 }
 .school-mask>p{
     font-size: 24px;
@@ -318,12 +362,10 @@
     color: #999999;
     /*transition:none;*/
 }
-.news-con-rig>li.active{
+.news-con-rig li:hover{
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,.1);
     background: #dd0000;
-    color: #ffffff;
-}
-.news-con-rig>li.active .news-detail>p:nth-child(1){
-    color: #ffffff;
+    color: #fff;
 }
 .news-time{
     float: left;
@@ -342,8 +384,9 @@
     content: "";
     display: block;
     width: 54%;
-    height: 2px;
-    background: #dfdfdf;
+    height: 1px;
+    background: #999;
+    opacity: 0.3;
     position: absolute;
     top: 24px;
     left: 23%;
@@ -375,12 +418,11 @@
 }
 .news-detail-goto{
     position: absolute;
-    top: 26px;
+    top: 32px;
     right: 5%;
 }
 .news-detail-goto>i{
-    font-size: 32px;
-    color: #acacac;
+    font-size: 20px;
 }
 .news-con-rig>li.active .news-detail-goto>i{
     color: #ffffff;

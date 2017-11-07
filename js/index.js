@@ -114,8 +114,8 @@ $('.schoolday-m>li').click(function () {
 
 
 // 新闻列表部分
-$('.news-con-rig>li').mouseover(function () {
-    $(this).addClass('active').siblings('li').removeClass('active');
-})
+// $('.news-con-rig>li').mouseover(function () {
+//     $(this).addClass('active').siblings('li').removeClass('active');
+// })
 
 
