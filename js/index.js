@@ -3,18 +3,18 @@
  */
 // 头部导航效果
 
-    window.onscroll=function (argument) {
-        var t = document.documentElement.scrollTop || document.body.scrollTop;
-        var w= document.body.clientWidth;
-        if (t>=50 & w>1100) {
-            $('.head').addClass('head-two');
-            $('.head-con').addClass('head-con-two');
+window.onscroll=function (argument) {
+    var t = document.documentElement.scrollTop || document.body.scrollTop;
+    var w= document.body.clientWidth;
+    if (t>=50 & w>1100) {
+        $('.head').addClass('head-two');
+        $('.head-con').addClass('head-con-two');
 
-        }else if(t<50){
-            $('.head').removeClass('head-two');
-            $('.head-con').removeClass('head-con-two');
-        }
+    }else if(t<50){
+        $('.head').removeClass('head-two');
+        $('.head-con').removeClass('head-con-two');
     }
+}
 
 function toggleNav(){
     $("#nav-toggle").toggleClass(" toggle-animate");
@@ -31,7 +31,6 @@ $('.head-lis>li').click(function () {
 // 头部轮播
 var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
-    autoplay:3000,
 
     // 如果需要分页器
     pagination: '.swiper-pagination',
@@ -117,5 +116,6 @@ $('.schoolday-m>li').click(function () {
 // 新闻列表部分
 $('.news-con-rig>li').mouseover(function () {
     $(this).addClass('active').siblings('li').removeClass('active');
-    $(this).children('.news-detail>a>img').attr('src','img/right-right.png');
 })
+
+

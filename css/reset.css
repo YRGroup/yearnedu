@@ -17,6 +17,7 @@ time, mark, audio, video {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    font-family: 微软雅黑, Arial, 宋体, sans-serif;
 }
 *{
     transition: all .2s;
@@ -24,20 +25,30 @@ time, mark, audio, video {
 body {
     font-size: 62.5%;
     line-height:1;
-    font-family: "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", 微软雅黑, "Segoe UI", Tahoma, 宋体b8b体, SimSun, sans-serif;
 }
 
 :focus {
 	outline: 1;
 }
-
+@font-face {
+    font-family: 'iconfont';  /* project id 461083 */
+    src: url('//at.alicdn.com/t/font_461083_i0jw2fuxfcbrcnmi.eot');
+    src: url('//at.alicdn.com/t/font_461083_i0jw2fuxfcbrcnmi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_461083_i0jw2fuxfcbrcnmi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_461083_i0jw2fuxfcbrcnmi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_461083_i0jw2fuxfcbrcnmi.svg#iconfont') format('svg');
+}
+.iconFont {
+    font-family: "iconfont";
+    font-style: normal;
+}
 article,aside,canvas,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section,summary { 
     display:block;
 }
 h1,h2,h3,h4,h5,h6{
-    font-weight: normal;
-}
+     font-weight: normal;
+ }
 nav ul {
     list-style:none;
 }

@@ -58,6 +58,7 @@
 }
 .grade>img{
     width: 2em;
+    margin-left: 70%;
 }
 .grade>span{
     position: relative;
@@ -115,4 +116,18 @@
     text-indent: 2em;
     font-size: 16px;
     line-height: 1.5;
+}
+
+
+/*地图展示部分*/
+.maps>li{
+    position: absolute;
+    bottom: 5px;
+    right: 3em;
+    height: 400px;
+    width: 600px;
+    background: rgba(0,0,0,.4);
+    z-index: 2300;
+    border-radius: 10px;
+    display: none;
 }
