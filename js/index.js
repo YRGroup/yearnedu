@@ -81,12 +81,12 @@ var options = {
     prefix: '',
     suffix: ''
 };
-var demo = new CountUp("myTargetElement", 110000, 120000, 0, 2.0, options);
-var demo2 = new CountUp("myTargetElement2", 1000, 3000, 0, 2.0, options);
-var demo3 = new CountUp("myTargetElement3", 0, 900, 0, 2.0, options);
-var demo4 = new CountUp("myTargetElement4", 5000, 8300, 0, 2.0, options);
+var demo = new CountUp("myTargetElement", 0, 120000, 0, 2.5, options);
+var demo2 = new CountUp("myTargetElement2", 0, 3000, 0, 2.5, options);
+var demo3 = new CountUp("myTargetElement3", 0, 900, 0, 2.5, options);
+var demo4 = new CountUp("myTargetElement4", 0, 8300, 0, 2.5, options);
 $(window).scroll(function() {
-    if ($(window).scrollTop() >= 800) {
+    if ($(window).scrollTop() >= 1000) {
         demo.start();
         demo2.start();
         demo3.start();
