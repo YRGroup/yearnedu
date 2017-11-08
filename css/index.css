@@ -75,19 +75,19 @@
     margin-top: 15px;
     background: url("../img/logo.png") 0 0 no-repeat;
 }
-.head-lis-two{
+.head-con-two>.head-lis{
      margin-top: 10px;
  }
-.head-lis-two>li>a{
+.head-con-two>.head-lis>li>a{
     color: #333333;
 }
-.head-lis-two>.head-lis-active{
+.head-con-two>.head-lis>.head-lis-active{
     border-bottom: 2px solid #333;
 }
-.head-lis-two>li .line{
+.head-con-two>.head-lis>li .line{
      background: #333;
  }
-.head-lis-two>.line{
+.head-con-two>.head-lis>.line{
     border-bottom: 2px solid #333;
 }
 .swiper-wrapper{
@@ -895,6 +895,44 @@ ul li .mask{
     }
 }
 
+/*校长弹框*/
+.tea-pop{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+    left: 0;
+    bottom: 0;
+}
+.tea-pop>.mask{
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}
+.tea-pop-con{
+    z-index: 110;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    right: 15%;
+    min-height: 200px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+}
+@media(max-width:840px){
+    .tea-pop-con{
+        top:10%;
+        left: 4%;
+        right:4%;
+        max-height: 76vh;
+        overflow: scroll;
+    }
+}
 .faceImg {
     max-width: 150px;
     border-radius: 14px;
@@ -935,7 +973,7 @@ ul li .mask{
 }
 
 /* 校长弹窗层 */
-.popup{
+.schoolpopup{
     display: none;
 }
 .popupinfo{

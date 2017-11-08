@@ -125,7 +125,7 @@ $('.schoolday-m>li').click(function () {
 
 // 教师弹出层
 $('.teacher-con').on('click', function () {
-    var popupText = $(this).next(".popup").html()
+    var popupText = $(this).next(".schoolpopup").html()
     layer.open({
         type: 1,
         shadeClose: true,
