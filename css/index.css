@@ -359,12 +359,18 @@
     overflow: hidden;
     border-radius: 2px;
     background: #F8F8F8;
+}
+.news-con-rig>li>a{
     color: #999999;
-    /*transition:none;*/
 }
 .news-con-rig li:hover{
-    box-shadow: 0 6px 6px 0 rgba(0,0,0,.1);
+    box-shadow: 0 6px 10px rgba(0,0,0,.1);
     background: #dd0000;
+}
+.news-con-rig li:hover a{
+    color: #fff;
+}
+.news-con-rig li:hover .news-detail>p:nth-child(1){
     color: #fff;
 }
 .news-time{
@@ -617,6 +623,7 @@ ul li .mask{
     }
     .schoolday{
         height: auto;
+        margin-top: 2em;
     }
     .schoolday .active-m{
         height: 18em;
