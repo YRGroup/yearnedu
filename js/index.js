@@ -3,24 +3,24 @@
  */
 // 头部导航效果
 
-window.onscroll=function (argument) {
+window.onscroll = function (argument) {
     var t = document.documentElement.scrollTop || document.body.scrollTop;
-    var w= document.body.clientWidth;
-    if (t>=50 & w>1100) {
+    var w = document.body.clientWidth;
+    if (t >= 50 & w > 1100) {
         $('.head').addClass('head-two');
         $('.head-con').addClass('head-con-two');
 
-    }else if(t<50){
+    } else if (t < 50) {
         $('.head').removeClass('head-two');
         $('.head-con').removeClass('head-con-two');
     }
 }
 
-function toggleNav(){
+function toggleNav() {
     $("#nav-toggle").toggleClass(" toggle-animate");
     $("body").toggleClass("open-nav");
 }
-$("#nav-toggle,#mask-layer").on("click",function(){
+$("#nav-toggle,#mask-layer").on("click", function () {
     toggleNav();
 });
 
@@ -29,9 +29,9 @@ $('.head-lis>li').click(function () {
     $(this).siblings().removeClass("head-lis-active");
 })
 // 头部轮播
-var mySwiper = new Swiper ('.swiper-container', {
+var mySwiper = new Swiper('.swiper-container', {
     loop: true,
-    autoplay : 4000,
+    autoplay: 4000,
 
     // 如果需要分页器
     pagination: '.swiper-pagination',
@@ -46,10 +46,10 @@ var mySwiper = new Swiper ('.swiper-container', {
 // 教师轮播
 var swiper = new Swiper('.swiper-container1', {
     // loop: true,
-    autoplay : 4000,
+    autoplay: 4000,
     pagination: '.swiper-pagination1',
     paginationClickable: true,
-    
+
     nextButton: '.teacher-next',
     prevButton: '.teacher-prev',
     slidesPerView: 5,
@@ -87,7 +87,7 @@ var demo = new CountUp("myTargetElement", 0, 120000, 0, 2.5, options);
 var demo2 = new CountUp("myTargetElement2", 0, 3000, 0, 2.5, options);
 var demo3 = new CountUp("myTargetElement3", 0, 900, 0, 2.5, options);
 var demo4 = new CountUp("myTargetElement4", 0, 8300, 0, 2.5, options);
-$(window).scroll(function() {
+$(window).scroll(function () {
     if ($(window).scrollTop() >= 1000) {
         demo.start();
         demo2.start();
@@ -108,7 +108,7 @@ $('.schoolday-lis>li').mouseleave(function () {
 });
 
 $('.schoolday-lis>li').click(function () {
-    window.location.href='coursePlay.html'
+    window.location.href = 'coursePlay.html'
 })
 // 特色课程移动端
 $('.schoolday-m>li').click(function () {
@@ -121,4 +121,17 @@ $('.schoolday-m>li').click(function () {
 //     $(this).addClass('active').siblings('li').removeClass('active');
 // })
 
-
+// 教师弹出层
+$('.teacher-con').on('click', function () {
+    var popupText = $(this).next(".popup").html()
+    layer.open({
+        type: 1,
+        shadeClose: true,
+        title: false,
+        area: ['640px'],
+        shadeClose: true, //点击遮罩关闭
+        content: popupText
+    });
+});
+// 动画
+new WOW().init();  

@@ -249,8 +249,11 @@
     top: 10px;
     left: -12px;
 }
+.news .des-con-more{
+    display: inline-block;
+}
 .des-con-more{
-    float: left;
+    display: block;
     width: 110px;
     height: 32px;
     line-height: 30px;
@@ -259,8 +262,7 @@
     font-size: 14px;
     color: #999;
     margin-top: 28px;
-    margin-left: 50%;
-    transform: translate(-50%);
+    margin:20px auto 0;
 }
 .des-con-more:hover{
     color: #ffffff;
@@ -397,6 +399,9 @@
     font-size: 16px;
     margin-top: 16px;
 }
+.news{
+    margin-top: -60px;
+}
 .news-con{
     max-width: 1200px;
     margin: 60px auto 0;
@@ -498,6 +503,7 @@
     height: 100%;
     text-align: center;
     transition: all 0.1s;
+    color: #999;
 }
 .news-time-year{
     font-size: 18px;
@@ -660,8 +666,8 @@
     margin: 60px auto 0;
 }
 .footer-con>img{
-    width: 190px;
-    height: 190px;
+    width: 160px;
+    height: 160px;
     /*padding: 0 100px;*/
 }
 .footer-contact{
@@ -684,9 +690,9 @@
     width: 100%;
     text-align: center;
     background: #4c4c4c;
-    padding: 10px 0;
+    padding: 16px 0;
     font-size: 12px;
-    color: #d9d9d9;
+    color: #A5A5A5;
 }
 
 /*特色课程部分*/
@@ -964,4 +970,36 @@ ul li .mask{
 }
 .swiper-pagination-bullet{
     margin: 0 5px;
+}
+
+/* 校长弹窗层 */
+.popup{
+    display: none;
+}
+.popupinfo{
+    padding: 30px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.teacherinfo{
+    text-align: center;
+    margin: 0 auto;
+    line-height: 32px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+.teacherinfo h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+.teacherinfo .info{
+    opacity: 0.8;
+}
+.teacherinfo img{
+    width: 160px;
+    height: 160px;
+    border-radius: 6px;
+}
+.popupinfo .infotext{
+    margin-top: 20px;
 }
