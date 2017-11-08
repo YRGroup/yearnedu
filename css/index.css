@@ -115,7 +115,7 @@
 }
 .des{
     background-repeat: no-repeat;
-    /*background-size: cover;*/
+    background-size: cover;
     background-color: transparent;
     background-position: center center;
     background-image: url("../img/section2Bg.jpg");
@@ -432,12 +432,14 @@
     background: #f8f8f8;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 .teacher .swiper-container1{
     max-width: 1200px;
     height: 330px;
     margin: 60px auto;
     overflow: hidden;
+
 }
 .teacher .swiper-slide{
     min-height: 330px;

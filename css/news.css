@@ -71,9 +71,8 @@
 }
 
 .detail-mian{
-    width: 1000px;
+    max-width: 1000px;
     margin:0 auto;
-    padding-top:84px;
     min-height: 966px;
 }
 .detail-head{
@@ -93,7 +92,7 @@
     margin-top: 8px;
 }
 .detail-con{
-    padding: 60px 20px;
+    padding: 50px 20px;
     font-size: 14px;
     color: #333;
 }
@@ -104,4 +103,9 @@
 .detail-con>img{
     width: 100%;
     margin: 20px 0;
+}
+@media(max-width:840px){
+    .news-head{
+        height: 30vh;
+    }
 }

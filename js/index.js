@@ -47,8 +47,8 @@ var swiper = new Swiper('.swiper-container1', {
     // loop: true,
     pagination: '.swiper-pagination1',
     paginationClickable: true,
-    nextButton: '.swiper-button-next1',
-    prevButton: '.swiper-button-prev1',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
     slidesPerView: 5,
     spaceBetween: 50,
     breakpoints: {
