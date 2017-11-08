@@ -10,7 +10,7 @@
         margin:0 auto;
     }
     .head-logo{
-        width: 16em;
+        width: 18em;
         height: 4em;
         margin-top: 10px;
         margin-left: 50%;
@@ -210,6 +210,10 @@
 }
 
 @media(max-width:840px){
+    .swiper-wrapper {
+        height: auto;
+        border-bottom:none;
+    }
     .swiper-slide{
         min-height: 35vh;
     }
@@ -220,18 +224,17 @@
         padding-top: 3em;
         padding-bottom: 0em;
     }
+    .des{
+        padding-bottom: 2em;
+    }
     .des-con{
         width: 90%;
     }
     .data-con{
         margin: 0 auto;
     }
-    .school-con{
-        padding-top: 3em;
-    }
     .school-lis{
         width: 100vw;
-        height: 30vh;
     }
     .school-lis>img{
         width: 100%;
@@ -240,9 +243,6 @@
     .school-mask{
         display: block;
         width: 100%;
-    }
-    .school-mask>p{
-        margin-top: 2em;
     }
     .news-con-left{
         display: none;
