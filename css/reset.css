@@ -26,18 +26,19 @@ body {
     font-size: 62.5%;
     line-height:1;
 }
-
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
 :focus {
 	outline: 1;
 }
 @font-face {
     font-family: 'iconfont';  /* project id 461083 */
-    src: url('http://at.alicdn.com/t/font_461083_i0jw2fuxfcbrcnmi.eot');
-    src: url('http://at.alicdn.com/t/font_461083_i0jw2fuxfcbrcnmi.eot?#iefix') format('embedded-opentype'),
-    url('http://at.alicdn.com/t/font_461083_i0jw2fuxfcbrcnmi.woff') format('woff'),
-    url('http://at.alicdn.com/t/font_461083_i0jw2fuxfcbrcnmi.ttf') format('truetype'),
-    url('http://at.alicdn.com/t/font_461083_i0jw2fuxfcbrcnmi.svg#iconfont') format('svg');
-}
+    src: url('http://at.alicdn.com/t/font_461083_bcniawoe6ro7ds4i.eot');
+    src: url('http://at.alicdn.com/t/font_461083_bcniawoe6ro7ds4i.eot?#iefix') format('embedded-opentype'),
+    url('http://at.alicdn.com/t/font_461083_bcniawoe6ro7ds4i.woff') format('woff'),
+    url('http://at.alicdn.com/t/font_461083_bcniawoe6ro7ds4i.ttf') format('truetype'),
+    url('http://at.alicdn.com/t/font_461083_bcniawoe6ro7ds4i.svg#iconfont') format('svg');
+  }
 .iconFont {
     font-family: "iconfont";
     font-style: normal;
