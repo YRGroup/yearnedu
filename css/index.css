@@ -2,6 +2,11 @@
     width: 100%;
     height: 100%;
 }
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
 .head{
     position: fixed;
     width: 100%;
@@ -86,10 +91,58 @@
     border-bottom: 2px solid #333;
 }
 .swiper-wrapper{
-    height: calc(100vh - 120px);
-    border-bottom: 2px solid #333;
+    /* height: calc(100vh - 120px); */
+    /* border-bottom: 2px solid #333; */
  }
-.swiper-slide{
+.banner{
+    height: calc(100vh - 100px);
+    width: 100%;
+    position: relative;
+}
+.clear{
+    position: absolute;
+    color: #fff;
+    bottom: 30px;
+    opacity: 0.5;
+    left: 50%;
+    font-size: 32px;
+    z-index: 99;
+    -webkit-transform: translate3d(-50%,0,0);
+    transform: translate3d(-50%,0,0);
+    animation: fadeInUp .6s cubic-bezier(.445,.05,.55,1) .2s infinite alternate;
+    -webkit-animation: upDown .5s both;
+    animation: upDown .5s both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: cubic-bezier(.63,.19,.35,.89);
+    animation-timing-function: cubic-bezier(.63,.19,.35,.89)
+}
+@-webkit-keyframes upDown {
+    0% {
+        bottom: 30px;
+        opacity: 0.6;
+    }
+
+    100% {
+        bottom: 15px;
+        opacity: 0;
+    }
+}
+
+@keyframes upDown {
+    0% {
+        bottom: 30px;
+        opacity: 0.6;
+    }
+
+    100% {
+        bottom: 15px;
+        opacity: 0;
+    }
+}
+.banner .swiper-slide{
     width: 100%;
     min-height: 800px;
     background-repeat: no-repeat;
@@ -108,6 +161,36 @@
     background-image: url("../img/banner1.jpg");
 }
 
+.button-prev,.button-next{
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 60px;
+    line-height:60px;
+    text-align: center;
+    margin-top: -100px;
+    z-index: 100;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: .5;
+}
+.button-prev{
+    left: 0;
+}
+.button-next{
+    right: 0;
+}
+.button-prev:hover,.button-next:hover{
+    background: #dd0000;
+    opacity: .8;
+}
+.swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+}
 .section{
     padding-top: 60px;
     padding-bottom: 60px;
@@ -127,7 +210,7 @@
     height: auto; */
 }
 .des-con{
-    width: 42%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
 }
@@ -166,8 +249,11 @@
     top: 10px;
     left: -12px;
 }
+.news .des-con-more{
+    display: inline-block;
+}
 .des-con-more{
-    float: left;
+    display: block;
     width: 110px;
     height: 32px;
     line-height: 30px;
@@ -176,8 +262,7 @@
     font-size: 14px;
     color: #999;
     margin-top: 28px;
-    margin-left: 50%;
-    transform: translate(-50%);
+    margin:20px auto 0;
 }
 .des-con-more:hover{
     color: #ffffff;
@@ -212,9 +297,11 @@
     background: #ffc900;
 }
 .data-lis:hover .data-img{
-    color: #333;
     border: 2px solid #333;
     margin-top: 40px;
+}
+.data-lis:hover i{
+    color: #333;
 }
 .data-lis .number{
     font-weight: 500;
@@ -312,10 +399,12 @@
     font-size: 16px;
     margin-top: 16px;
 }
+.news{
+    margin-top: -60px;
+}
 .news-con{
     max-width: 1200px;
     margin: 60px auto 0;
-    overflow: hidden;
 }
 .news-con-left{
     box-sizing:border-box;
@@ -328,13 +417,29 @@
     margin-right: 3%;
     overflow: hidden;
     text-align: left;
+    cursor: pointer;
+}
+.news-con-left:hover{
+    box-shadow: 0 5px 10px 0px rgba(0,0,0,.1);
+}
+.news-con-left:hover img{
+    transform: scale(1.2);
+}
+.news-con-left:hover .news-title{
+    color: #dd0000;
+}
+.news-con-left:hover .news-des,.news-con-left:hover .news-title{
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
 }
 .news-con-left>h5{
-    font-size: 24px;
+    font-size: 20px;
     color: #999999;
 }
 .news-title{
     font-size: 18px;
+    height: 20px;
+    overflow: hidden;
     color: #333333;
     margin: 14px 0;
 }
@@ -343,10 +448,16 @@
     color: #999999;
     line-height: 1.5;
     margin-bottom: 10px;
+    max-height: 60px;
+    overflow: hidden;
 }
 .news-img{
     width: 100%;
     height: 166px;
+    overflow: hidden;
+}
+.news-img img{
+    max-width: 100%;
 }
 .news-con-rig{
     float: left;
@@ -362,15 +473,28 @@
 }
 .news-con-rig>li>a{
     color: #999999;
+    cursor: pointer;
+    /*transition:none;*/
 }
 .news-con-rig li:hover{
-    box-shadow: 0 6px 10px rgba(0,0,0,.1);
+    box-shadow: 0 5px 10px 0px rgba(0,0,0,.1);
     background: #dd0000;
+    opacity: 0.8;
 }
-.news-con-rig li:hover a{
+.news-con-rig li:hover .news-detail{
+    margin-left: 2%;
+}
+.news-con-rig li:hover .news-detail>p{
     color: #fff;
 }
-.news-con-rig li:hover .news-detail>p:nth-child(1){
+.news-con-rig li:hover .news-time-year,.news-con-rig li:hover .news-time-day{
+    color: #fff;
+    opacity: 0.7;
+}
+.news-con-rig li:hover .news-detail-goto{
+    margin-right: 10px;
+}
+.news-con-rig li:hover i{
     color: #fff;
 }
 .news-time{
@@ -378,7 +502,8 @@
     width:14%;
     height: 100%;
     text-align: center;
-    margin-right:3%;
+    transition: all 0.1s;
+    color: #999;
 }
 .news-time-year{
     font-size: 18px;
@@ -421,18 +546,19 @@
 .news-detail>p:nth-child(2){
     margin-top: 12px;
     transition:none;
+    opacity: 0.8;
 }
 .news-detail-goto{
     position: absolute;
-    top: 32px;
-    right: 5%;
+    top: 30px;
+    right: 0;
+    margin-right: -40px;
 }
 .news-detail-goto>i{
     font-size: 20px;
+    color: #dd0000;
 }
-.news-con-rig>li.active .news-detail-goto>i{
-    color: #ffffff;
-}
+
 .teacher{
     width: 100%;
     background: #f8f8f8;
@@ -442,17 +568,18 @@
 }
 .teacher .swiper-container1{
     max-width: 1200px;
-    height: 330px;
-    margin: 60px auto;
+    margin-top: 60px;
     overflow: hidden;
 
 }
+.teacher-swiper-slide{
+    height: 350px;
+}
 .teacher .swiper-slide{
-    min-height: 330px;
+    /* height: 330px;
     text-align: center;
     font-size: 18px;
     background: #ffffff;
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -461,11 +588,55 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    cursor: pointer; */
+}
+.teacher .swiper-slide:hover img{
+    transform: scale(1.1);
+}
+.teacher .swiper-slide:hover .teacher-con{
+    box-shadow: 0 5px 10px 10px rgba(0,0,0,.1);
+}
+.teacher-con{
+    height: 330px;
+    text-align: center;
+    font-size: 18px;
+    background: #ffffff;
+    overflow: hidden;
     cursor: pointer;
 }
-.teacher-con>img{
-    width: 100%;
+.teacher-prev,.teacher-next{
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    line-height:40px;
+    text-align: center;
+    margin-top: -20px;
+    z-index: 100;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: .2;
+}
+.teacher-prev{
+    left: -40px;
+}
+.teacher-next{
+    right: -40px;
+}
+.teacher-prev:hover,.teacher-next:hover{
+    background: #dd0000;
+    opacity: .8;
+}
+
+.teacher-con>.teacher-img{
+    width: 200px;
     height: 200px;
+    overflow: hidden;
+}
+.teacher-con>.teacher-img img{
+    max-width: 100%;
 }
 .teacher-con>h3{
     font-size: 24px;
@@ -495,8 +666,8 @@
     margin: 60px auto 0;
 }
 .footer-con>img{
-    width: 190px;
-    height: 190px;
+    width: 160px;
+    height: 160px;
     /*padding: 0 100px;*/
 }
 .footer-contact{
@@ -519,9 +690,9 @@
     width: 100%;
     text-align: center;
     background: #4c4c4c;
-    padding: 10px 0;
+    padding: 16px 0;
     font-size: 12px;
-    color: #d9d9d9;
+    color: #A5A5A5;
 }
 
 /*特色课程部分*/
@@ -799,4 +970,36 @@ ul li .mask{
 }
 .swiper-pagination-bullet{
     margin: 0 5px;
+}
+
+/* 校长弹窗层 */
+.popup{
+    display: none;
+}
+.popupinfo{
+    padding: 30px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.teacherinfo{
+    text-align: center;
+    margin: 0 auto;
+    line-height: 32px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+.teacherinfo h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+.teacherinfo .info{
+    opacity: 0.8;
+}
+.teacherinfo img{
+    width: 160px;
+    height: 160px;
+    border-radius: 6px;
+}
+.popupinfo .infotext{
+    margin-top: 20px;
 }
