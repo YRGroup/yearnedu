@@ -9,10 +9,12 @@ window.onscroll = function (argument) {
     if (t >= 50 & w > 1100) {
         $('.head').addClass('head-two');
         $('.head-con').addClass('head-con-two');
+        $('.head-lis').addClass('head-lis-two');
 
     } else if (t < 50) {
         $('.head').removeClass('head-two');
         $('.head-con').removeClass('head-con-two');
+        $('.head-lis').removeClass('head-lis-two');
     }
 }
 

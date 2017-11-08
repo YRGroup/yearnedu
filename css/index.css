@@ -75,19 +75,19 @@
     margin-top: 15px;
     background: url("../img/logo.png") 0 0 no-repeat;
 }
-.head-con-two>.head-lis{
+.head-lis-two{
      margin-top: 10px;
  }
-.head-con-two>.head-lis>li>a{
+.head-lis-two>li>a{
     color: #333333;
 }
-.head-con-two>.head-lis>.head-lis-active{
+.head-lis-two>.head-lis-active{
     border-bottom: 2px solid #333;
 }
-.head-con-two>.head-lis>li .line{
+.head-lis-two>li .line{
      background: #333;
  }
-.head-con-two>.head-lis>.line{
+.head-lis-two>.line{
     border-bottom: 2px solid #333;
 }
 .swiper-wrapper{
