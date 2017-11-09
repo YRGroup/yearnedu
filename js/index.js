@@ -136,4 +136,8 @@ $('.teacher-con').on('click', function () {
     });
 });
 // 动画
-new WOW().init();  
+AOS.init({
+    offset: 200,
+    duration: 300,
+    easing: 'ease-in-sine',
+  });
