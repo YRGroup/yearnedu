@@ -2,6 +2,7 @@
 @media(max-width:1100px){
     .head{
         height: 60px;
+        background: #4B4B4B;
     }
     .head-con{
         padding: 0;
@@ -221,17 +222,22 @@
         display: none;
     }
     .section{
-        padding-top: 3em;
+        padding-top: 2em;
         padding-bottom: 0em;
     }
     .des{
         padding-bottom: 2em;
     }
-    .des-con{
-        width: 90%;
-    }
     .data-con{
         margin: 0 auto;
+    }
+    .des-con{
+      width: 100%;
+    }
+    .des-con .des-con-lis{
+      box-shadow:none ;
+      padding:20px;
+      background: transparent;
     }
     .school-lis{
         width: 100vw;
@@ -241,8 +247,13 @@
         height: 100%;
     }
     .school-mask{
-        display: block;
-        width: 100%;
+        opacity: 1;
+    }
+    .school-lis .school-des{
+      top: 20%;
+    }
+    .school-lis .school-more{
+      bottom: 20%;
     }
     .news-con-left{
         display: none;
@@ -253,5 +264,25 @@
     }
     .schoolday-lis{
         display: none;
+    }
+    .data-lis{
+      height: 220px;
+    }
+    .data-img{
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+    }
+    .footer-con{
+      margin-top: 10px;
+    }
+    .footer-contact{
+      padding: 0;
+    }
+    .foot span{
+      display: block;
+    }
+    .foot .mshow{
+      display: none;
     }
 }
