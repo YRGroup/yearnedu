@@ -215,11 +215,14 @@
         height: auto;
         border-bottom:none;
     }
-    .swiper-slide{
+    .banner{
+        height: auto;
+    }
+    .banner .swiper-slide{
         min-height: 35vh;
     }
-    .swiper-button-prev,.swiper-button-next{
-        display: none;
+    .button-prev,.button-next{
+        /*display: none;*/
     }
     .section{
         padding-top: 2em;
@@ -255,12 +258,18 @@
     .school-lis .school-more{
       bottom: 20%;
     }
+    .news{
+        margin-top: 0;
+    }
     .news-con-left{
         display: none;
     }
     .news-con-rig{
         width: 94%;
         margin-left: 3%;
+    }
+    .news-con-rig>li .news-detail{
+        margin-left: 2%;
     }
     .schoolday-lis{
         display: none;
@@ -284,5 +293,8 @@
     }
     .foot .mshow{
       display: none;
+    }
+    .layui-layer{
+        width: 90% !important;
     }
 }
