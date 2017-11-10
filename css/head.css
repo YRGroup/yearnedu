@@ -217,12 +217,13 @@
     }
     .banner{
         height: auto;
+        padding-top: 60px;
     }
     .banner .swiper-slide{
         min-height: 35vh;
     }
     .button-prev,.button-next{
-        /*display: none;*/
+        display: none;
     }
     .section{
         padding-top: 2em;

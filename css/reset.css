@@ -33,12 +33,12 @@ body {
 }
 @font-face {
     font-family: 'iconfont';  /* project id 461083 */
-    src: url('http://at.alicdn.com/t/font_461083_bcniawoe6ro7ds4i.eot');
-    src: url('http://at.alicdn.com/t/font_461083_bcniawoe6ro7ds4i.eot?#iefix') format('embedded-opentype'),
-    url('http://at.alicdn.com/t/font_461083_bcniawoe6ro7ds4i.woff') format('woff'),
-    url('http://at.alicdn.com/t/font_461083_bcniawoe6ro7ds4i.ttf') format('truetype'),
-    url('http://at.alicdn.com/t/font_461083_bcniawoe6ro7ds4i.svg#iconfont') format('svg');
-  }
+    src: url('//at.alicdn.com/t/font_461083_rai3bqndljsdzpvi.eot');
+    src: url('//at.alicdn.com/t/font_461083_rai3bqndljsdzpvi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_461083_rai3bqndljsdzpvi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_461083_rai3bqndljsdzpvi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_461083_rai3bqndljsdzpvi.svg#iconfont') format('svg');
+}
 .iconFont {
     font-family: "iconfont";
     font-style: normal;

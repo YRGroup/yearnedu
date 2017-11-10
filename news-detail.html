@@ -13,9 +13,6 @@
     <link rel="stylesheet" href="css/head.css">
     <link rel="stylesheet" href="css/news.css">
     <style>
-        .nav-toggle span{
-            background: #666;
-        }
         .head-lis-two>.head-lis-active{
             border-bottom: none;
         }
@@ -66,6 +63,14 @@
     }
     $("#nav-toggle,#mask-layer").on("click",function(){
         toggleNav();
+    });
+    $(document).ready(function(){
+        var w = document.body.clientWidth;
+        if(w<840){
+            $('.head-con').removeClass('head-con-two')
+        }else{
+            $('.head-con').addClass('head-con-two')
+        }
     });
 </script>
 </html>
