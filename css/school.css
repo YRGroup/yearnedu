@@ -157,7 +157,7 @@
 .s-choice-con{
     width: 1200px;
     margin: 60px auto 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .s-choice-con>li{
     float: left;
@@ -167,12 +167,33 @@
 .s-choice-lis{
     width: 340px;
     height: 334px;
-    padding: 10px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.s-choice-lis:hover{
+    background: #ffc900;
+    box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+    margin-top: -2px;
+}
+.s-choice-lis:hover .s-choice-icon{
+    border: 2px solid #333;
+    animation: turn1 1s ;
+}
+.s-choice-lis:hover .s-choice-icon>i{
+    color: #333;
+}
+.s-choice-lis:hover h4{
+    color: #333;
+
+}
+.s-choice-lis:hover .s-choice-p>p{
+    color: #666;
 }
 .s-choice-icon{
-    width: 130px;
-    height: 130px;
-    line-height: 130px;
+    width: 128px;
+    height: 128px;
+    line-height: 128px;
     margin: 0 auto;
     border: 2px solid #ffc900;
     border-radius: 50%;
@@ -187,6 +208,15 @@
     margin-top: 12px;
     margin-bottom: 22px;
     font-weight: bold;
+}
+@keyframes turn1 {
+    to {
+        transform: rotateX(360deg);
+        -moz-transform: rotateX(360deg);
+        -webkit-transform: rotateX(360deg);
+        -o-transform: rotateX(360deg);
+        -ms-transform: rotateX(360deg);
+    }
 }
 .s-choice-p{
     text-align: left;
