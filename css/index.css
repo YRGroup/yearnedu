@@ -155,10 +155,10 @@
 
 }
 .slide2{
-    background-image: url("../img/banner1.jpg");
+    background-image: url("../img/banner2.jpg");
 }
 .slide3{
-    background-image: url("../img/banner1.jpg");
+    background-image: url("../img/banner3.jpg");
 }
 
 .button-prev,.button-next{
@@ -460,13 +460,12 @@
     max-width: 100%;
 }
 .news-con-rig{
-    float: left;
-    width: 47%;
 }
 .news-con-rig>li{
-    width: 100%;
+    width: 48%;
+    display: inline-block;
     height: 80px;
-    margin-bottom: 20px;
+    margin:0 10px 20px;
     overflow: hidden;
     border-radius: 2px;
     background: #F8F8F8;

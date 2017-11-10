@@ -298,4 +298,7 @@
     .layui-layer{
         width: 90% !important;
     }
+    .news-con-rig>li{
+      width: 90%;
+    }
 }
