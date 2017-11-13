@@ -26,10 +26,10 @@ $("#nav-toggle,#mask-layer").on("click", function () {
     toggleNav();
 });
 
-$('.head-lis>li').click(function () {
-    $(this).addClass("head-lis-active");
-    $(this).siblings().removeClass("head-lis-active");
-})
+// $('.head-lis>li').click(function () {
+//     $(this).addClass("head-lis-active");
+//     $(this).siblings().removeClass("head-lis-active");
+// })
 // 头部轮播
 var mySwiper = new Swiper('.swiper-container', {
     loop: true,
